@@ -18,10 +18,17 @@ const styles = theme => ({
         marginBottom: 102,
         marginTop: 102,
     },
-    text: {
+    title: {
         borderTop: '2px solid red',
         marginBottom: 30,
         paddingTop: 30,
+    },
+    subtitle: {
+        marginBottom: 30,
+        '& >a': {
+            color: theme.palette.secondary.main,
+            textDecoration: 'none',
+        }
     }
 });
 
@@ -37,8 +44,11 @@ function Content(props) {
                      alt="Purjus Communication"
                      className={classes.image}
                 />
-                <Typography variant="h5" component="h3" className={classes.text}>
+                <Typography variant="h5" component="h3" className={classes.title}>
                     À partir d'ici, la nav va disparaître et réapparaître lorsqu'on remonte !
+                </Typography>
+                <Typography variant="body2" className={classes.subtitle}>
+                    Le code du composant est visible <a href="https://github.com/kewinMarchand/test-app/blob/master/src/Navbar.js" target="_blank">à cette adresse</a>
                 </Typography>
                 <Typography gutterBottom>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
