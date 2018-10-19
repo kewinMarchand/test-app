@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
 
 const styles = {
     root: {
@@ -16,6 +17,9 @@ const styles = {
     hidden: {
         opacity: 0,
         transition: 'all 2s',
+    },
+    image: {
+        marginRight: 10,
     }
 };
 
@@ -69,11 +73,16 @@ class Navbar extends React.Component {
 
         return (
             <div className={classes.root}>
-                <AppBar position="fixed" color="primary" className={this.state.visible ? classes.visible : classes.hidden}>
+                <AppBar position="fixed" color="secondary" className={this.state.visible ? classes.visible : classes.hidden}>
                     <Toolbar>
-                        <Typography variant="h6" color="inherit">
-                            Purjus
-                        </Typography>
+                        <img
+                            src="http://www.purjus.fr/wp-content/uploads/2016/07/favicon-purjus.png"
+                            width="auto"
+                            height="24"
+                            alt="Purjus Communication"
+                            className={classes.image}
+                        />
+                        <Typography variant="h6" color="inherit">Purjus</Typography>
                     </Toolbar>
                 </AppBar>
             </div>

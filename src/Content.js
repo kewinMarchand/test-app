@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Toolbar from '@material-ui/core/Toolbar';
 
 const styles = theme => ({
     root: {
@@ -10,12 +11,17 @@ const styles = theme => ({
         margin: 'auto',
         maxWidth: 600,
         minHeight: '300vh',
-        paddingTop: theme.spacing.unit * 7,
+        paddingTop: theme.spacing.unit * 8,
         paddingBottom: theme.spacing.unit * 2,
     },
+    image: {
+        marginBottom: 102,
+        marginTop: 102,
+    },
     text: {
-        borderTop: '1px solid red',
-        marginTop: 500,
+        borderTop: '2px solid red',
+        marginBottom: 30,
+        paddingTop: 30,
     }
 });
 
@@ -25,7 +31,13 @@ function Content(props) {
     return (
         <div>
             <Paper className={classes.root} elevation={1}>
-                <Typography variant="h5" component="h3" gutterBottom className={classes.text}>
+                <img src="http://www.purjus.fr/wp-content/uploads/2016/07/logo-purjus-noir.png"
+                     width="312"
+                     height="296"
+                     alt="Purjus Communication"
+                     className={classes.image}
+                />
+                <Typography variant="h5" component="h3" className={classes.text}>
                     À partir d'ici, la nav va disparaître et réapparaître lorsqu'on remonte !
                 </Typography>
                 <Typography gutterBottom>
