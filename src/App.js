@@ -5,6 +5,7 @@ import orange from '@material-ui/core/colors/orange';
 import './App.css';
 import Navbar from './Navbar'
 import Content from './Content'
+import Carousel from './Carousel'
 
 const theme = createMuiTheme({
     palette: {
@@ -13,6 +14,18 @@ const theme = createMuiTheme({
     },
 });
 
+const images = [
+  {url: "https://picsum.photos/800/450?image=100"},
+  {url: "https://picsum.photos/800/450?image=200"},
+  {url: "https://picsum.photos/800/450?image=300"},
+  {url: "https://picsum.photos/800/450?image=400"},
+  {url: "https://picsum.photos/800/450?image=500"},
+  {url: "https://picsum.photos/800/450?image=600"},
+  {url: "https://picsum.photos/800/450?image=700"},
+  {url: "https://picsum.photos/800/450?image=800"},
+  {url: "https://picsum.photos/800/450?image=900"},
+  {url: "https://picsum.photos/800/450?image=1000"}
+]
 class App extends Component {
   render() {
     return (
@@ -20,6 +33,17 @@ class App extends Component {
           <MuiThemeProvider theme={theme}>
             <Navbar/>
             <Content/>
+            <Carousel nbrSlides={1} marginRight={50}>
+              { 
+              images.map((image) => (
+                  <img 
+                    key={image.url} 
+                    src={image.url} 
+                    alt="" 
+                  />
+              ))
+              }   
+            </Carousel>
           </MuiThemeProvider>
       </div>
     );
