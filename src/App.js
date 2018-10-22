@@ -8,8 +8,8 @@ import Content from './Content'
 
 const theme = createMuiTheme({
     palette: {
-        primary: { main: teal[500] },
-        secondary: { main: orange[500] },
+        primary: { main: teal[500], contrastText: '#000' },
+        secondary: { main: orange[500], contrastText: '#FFF' },
     },
 });
 

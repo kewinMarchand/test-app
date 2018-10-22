@@ -1,15 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
+import { withStyles, AppBar, Toolbar, Typography } from '@material-ui/core/';
+
+import Avatar from './Avatar';
 
 const styles = {
-    root: {
-        flexGrow: 1,
-    },
     visible: {
         opacity: 1,
         transition: 'all 2s',
@@ -72,20 +67,12 @@ class Navbar extends React.Component {
         const { classes } = this.props;
 
         return (
-            <div className={classes.root}>
-                <AppBar position="fixed" color="secondary" className={this.state.visible ? classes.visible : classes.hidden}>
-                    <Toolbar>
-                        <img
-                            src="http://www.purjus.fr/wp-content/uploads/2016/07/favicon-purjus.png"
-                            width="auto"
-                            height="24"
-                            alt="Purjus Communication"
-                            className={classes.image}
-                        />
-                        <Typography variant="h6" color="inherit">Purjus</Typography>
-                    </Toolbar>
-                </AppBar>
-            </div>
+            <AppBar position="fixed" color="secondary" className={this.state.visible ? classes.visible : classes.hidden}>
+                <Toolbar>
+                    <Avatar size="56px" />
+                    <Typography variant="h6" color="inherit">Test-app</Typography>
+                </Toolbar>
+            </AppBar>
         );
     }
 
