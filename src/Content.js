@@ -43,6 +43,7 @@ function Content(props) {
                      height="296"
                      alt="Purjus Communication"
                      className={classes.image}
+                     data-tut="reactour__start"
                 />
                 <Typography variant="h5" component="h3" className={classes.title}>
                     À partir d'ici, la nav va disparaître et réapparaître lorsqu'on remonte !

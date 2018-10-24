@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
 
 const styles = {
     root: {
@@ -69,7 +69,7 @@ class Navbar extends React.Component {
     }
 
     render() {
-        const { classes } = this.props;
+        const { classes, openTour } = this.props;
 
         return (
             <div className={classes.root}>
@@ -82,7 +82,10 @@ class Navbar extends React.Component {
                             alt="Purjus Communication"
                             className={classes.image}
                         />
-                        <Typography variant="h6" color="inherit">Purjus</Typography>
+                        <Typography variant="h6" color="inherit" >Purjus</Typography>
+                        <Button onClick={openTour}>
+                            Tour
+                        </Button>
                     </Toolbar>
                 </AppBar>
             </div>
@@ -93,6 +96,7 @@ class Navbar extends React.Component {
 
 Navbar.propTypes = {
     classes: PropTypes.object.isRequired,
+    openTour: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(Navbar);
