@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import Toolbar from '@material-ui/core/Toolbar';
 
 const styles = theme => ({
     root: {
@@ -43,9 +42,9 @@ function Content(props) {
                      height="296"
                      alt="Purjus Communication"
                      className={classes.image}
-                     data-tut="reactour__start"
+                     data-tut="reactour__image"
                 />
-                <Typography variant="h5" component="h3" className={classes.title}>
+                <Typography variant="h5" component="h3" className={classes.title} data-tut="reactour__title">
                     À partir d'ici, la nav va disparaître et réapparaître lorsqu'on remonte !
                 </Typography>
                 <Typography variant="body2" className={classes.subtitle}>
