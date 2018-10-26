@@ -43,12 +43,13 @@ function Content(props) {
                      height="296"
                      alt="Purjus Communication"
                      className={classes.image}
-                     data-tut="reactour__start"
+                     data-tuto="tuto_start"
+                     data-tuto2="tuto_step"
                 />
                 <Typography variant="h5" component="h3" className={classes.title}>
                     À partir d'ici, la nav va disparaître et réapparaître lorsqu'on remonte !
                 </Typography>
-                <Typography variant="body2" className={classes.subtitle}>
+                <Typography variant="body2" className={classes.subtitle} data-tuto="tuto_step2">
                     Le code du composant est visible <a href="https://github.com/kewinMarchand/test-app/blob/master/src/Navbar.js" target="_blank">à cette adresse</a>
                 </Typography>
                 <Typography gutterBottom>

@@ -69,7 +69,7 @@ class Navbar extends React.Component {
     }
 
     render() {
-        const { classes, openTour } = this.props;
+        const { classes, handleClickStart } = this.props;
 
         return (
             <div className={classes.root}>
@@ -83,9 +83,6 @@ class Navbar extends React.Component {
                             className={classes.image}
                         />
                         <Typography variant="h6" color="inherit" >Purjus</Typography>
-                        <Button onClick={openTour}>
-                            Tour
-                        </Button>
                     </Toolbar>
                 </AppBar>
             </div>
@@ -96,7 +93,7 @@ class Navbar extends React.Component {
 
 Navbar.propTypes = {
     classes: PropTypes.object.isRequired,
-    openTour: PropTypes.func.isRequired,
+    handleClickStart: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(Navbar);
