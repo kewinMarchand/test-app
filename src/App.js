@@ -1,27 +1,19 @@
-import React, { Component } from 'react';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import teal from '@material-ui/core/colors/teal';
-import orange from '@material-ui/core/colors/orange';
-import './App.css';
-import Navbar from './Navbar'
-import Content from './Content'
+import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import {MuiThemeProvider} from '@material-ui/core/styles';
+import theme from './Theme'
+import Home from './Layouts/Home'
+import AdminPage from './admin/src/AdminPage'
 
-const theme = createMuiTheme({
-    palette: {
-        primary: { main: teal[500] },
-        secondary: { main: orange[500] },
-    },
-});
-
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-          <MuiThemeProvider theme={theme}>
-            <Navbar/>
-            <Content/>
-          </MuiThemeProvider>
-      </div>
+      <Router>
+        <MuiThemeProvider theme={theme}>
+          <Route exact path="/" component={Home} />
+          <Route path="/admin/" component={AdminPage} />
+        </MuiThemeProvider>
+      </Router>
     );
   }
 }
