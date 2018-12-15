@@ -1,17 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Switch} from '@material-ui/core/'
+import {Switch, Tooltip} from '@material-ui/core/'
 
 class NavbarSwitch extends React.Component {
     render() {
         const { checked, handleChange } = this.props
         return (
-            <Switch
-                checked={checked}
-                onChange={handleChange}
-                value="checked"
-                color="primary"
-            />
+            <Tooltip title="change color">
+                <Switch
+                    checked={checked}
+                    onChange={handleChange}
+                    value="checked"
+                    color="primary"
+                />
+            </Tooltip>
         );
     }
 }

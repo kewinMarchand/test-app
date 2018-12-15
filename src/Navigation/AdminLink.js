@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Link} from "react-router-dom"
-import {withStyles, Fab} from '@material-ui/core/'
+import {withStyles, Fab, Tooltip} from '@material-ui/core/'
 import Dashboard from '@material-ui/icons/Dashboard'
 
 const styles = theme => ({
@@ -15,16 +15,18 @@ class AdminLink extends React.Component {
         const { classes, checked } = this.props
         return (
             <Link to="/admin/">
-                <Fab 
-                    color={checked ? "primary" : "secondary"}
-                    aria-label="Admin" 
-                    size="small"
-                    className={classes.fab}
-                >
-                    <Dashboard 
-                        color={checked ? "secondary" : "primary"}
-                    />
-                </Fab>
+                <Tooltip title="admin page">
+                    <Fab 
+                        color={checked ? "primary" : "secondary"}
+                        aria-label="Admin" 
+                        size="small"
+                        className={classes.fab}
+                    >
+                        <Dashboard 
+                            color={checked ? "secondary" : "primary"}
+                        />
+                    </Fab>
+                </Tooltip>
             </Link>
         );
     }
@@ -33,6 +35,6 @@ class AdminLink extends React.Component {
 AdminLink.propTypes = {
     classes: PropTypes.object.isRequired,
     checked: PropTypes.bool.isRequired,
-};
+}
 
-export default withStyles(styles)(AdminLink);
+export default withStyles(styles)(AdminLink)

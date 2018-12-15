@@ -1,6 +1,6 @@
 import React from 'react';
 import {Admin, Resource} from 'react-admin';
-import DataProvider from './DataProvider';
+import DataProvider from '../../DataProvider';
 import Dashboard from './Components/Dashboard';
 import NotFound from './Components/NotFound';
 import AdminLayout from './Layouts/AdminLayout';

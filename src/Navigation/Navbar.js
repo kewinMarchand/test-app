@@ -17,7 +17,6 @@ class Navbar extends React.Component {
     }
 
     render() {
-        const { classes } = this.props
         const { checked } = this.state
         return (
             <AppBarCustom checked={checked}>

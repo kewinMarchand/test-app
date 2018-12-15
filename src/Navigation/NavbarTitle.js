@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Link} from "react-router-dom"
-import { withStyles, Grid, Typography } from '@material-ui/core/'
+import {withStyles, Grid, Tooltip, Typography} from '@material-ui/core/'
 import NavbarLogo from './NavbarLogo'
 
 const styles = theme => ({
@@ -23,21 +23,23 @@ class NavbarTitle extends React.Component {
         return (
             <React.Fragment>
                 <Link to="/" className={classes.link}>
-                    <Grid 
-                        container
-                        alignItems="center" 
-                        wrap="nowrap"
-                    >
-                        <NavbarLogo logo={logo}/>
-                        <Typography 
-                            noWrap
-                            variant="h6" 
-                            color="inherit" 
-                            className={classes.title}
+                    <Tooltip title="Home page">
+                        <Grid 
+                            container
+                            alignItems="center" 
+                            wrap="nowrap"
                         >
-                            {title}
-                        </Typography>
-                    </Grid>
+                            <NavbarLogo logo={logo}/>
+                            <Typography 
+                                noWrap
+                                variant="h6" 
+                                color="inherit" 
+                                className={classes.title}
+                            >
+                                {title}
+                            </Typography>
+                        </Grid>
+                    </Tooltip>
                 </Link>
                 <Grid 
                     container 

@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Paragraphe from './Paragraphe';
+import Dashboard from '@material-ui/icons/Dashboard'
 
 const styles = theme => ({
     root: {
@@ -21,7 +22,7 @@ const styles = theme => ({
         marginTop: 102,
     },
     title: {
-        borderTop: '2px solid red',
+        borderTop: '2px solid ' + theme.palette.secondary.main,
         marginBottom: 30,
         paddingTop: 30,
     },
@@ -31,12 +32,17 @@ const styles = theme => ({
             color: theme.palette.secondary.main,
             textDecoration: 'none',
         }
+    },
+    inline: {
+        display: 'inline-block',
+        paddingLeft: 5,
+        position: 'relative',
+        top: 5,
     }
 });
 
 function Content(props) {
     const { classes } = props;
-
     return (
         <div>
             <Paper className={classes.root} elevation={1}>
@@ -52,16 +58,28 @@ function Content(props) {
                 <Typography variant="body2" className={classes.subtitle}>
                     Le code du composant est visible <a href="https://github.com/kewinMarchand/test-app/blob/master/src/Navigation/Navbar.js" target="_blank" rel="noopener noreferrer">à cette adresse</a>
                 </Typography>
-                <Paragraphe/>
-                <Paragraphe/>
-                <Paragraphe/>
-                <Paragraphe/>
-                <Paragraphe/>
-                <Paragraphe/>
-                <Paragraphe/>
-                <Paragraphe/>
-                <Paragraphe/>
-                <Paragraphe/>
+
+                <Typography variant="body1" gutterBottom>
+                    Vous pouvez changer l'apparence de la barre de navigation avec le switch
+                </Typography>
+
+                <Typography variant="body1" gutterBottom>
+                    Vous pouvez accèder à la page d'administration en cliquant sur l'icône
+                    <Typography 
+                        component="span" 
+                        className={classes.inline}
+                    >
+                        <Dashboard color="secondary"/>
+                    </Typography>
+                    
+                </Typography>
+
+                <Paragraphe />
+                <Paragraphe />
+                <Paragraphe />
+                <Paragraphe />
+                <Paragraphe />
+                <Paragraphe />
             </Paper>
         </div>
     );
