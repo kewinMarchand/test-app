@@ -3,6 +3,7 @@ import {Admin, Resource} from 'react-admin';
 import DataProvider from './DataProvider';
 import Dashboard from './Components/Dashboard';
 import NotFound from './Components/NotFound';
+import AdminLayout from './Layouts/AdminLayout';
 import theme from '../../Theme'
 import UserList from './Lists/Users';
 import PostList from './Lists/Posts';
@@ -15,6 +16,7 @@ class AdminPage extends React.Component {
         dataProvider={DataProvider} 
         dashboard={Dashboard}
         catchAll={NotFound}
+        appLayout={AdminLayout}
         theme={theme}
       >
         <Resource name="users" list={UserList} />

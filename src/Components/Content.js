@@ -50,7 +50,7 @@ function Content(props) {
                     À partir d'ici, la nav va disparaître et réapparaître lorsqu'on remonte !
                 </Typography>
                 <Typography variant="body2" className={classes.subtitle}>
-                    Le code du composant est visible <a href="https://github.com/kewinMarchand/test-app/blob/master/src/Navbar.js" target="_blank" rel="noopener noreferrer">à cette adresse</a>
+                    Le code du composant est visible <a href="https://github.com/kewinMarchand/test-app/blob/master/src/Navigation/Navbar.js" target="_blank" rel="noopener noreferrer">à cette adresse</a>
                 </Typography>
                 <Paragraphe/>
                 <Paragraphe/>

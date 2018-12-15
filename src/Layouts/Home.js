@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from './Layout'
-import Navbar from '../Components/Navbar'
+import Navbar from '../Navigation/Navbar'
 import Content from '../Components/Content'
 
 class Home extends React.Component {
