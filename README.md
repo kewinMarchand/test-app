@@ -2,6 +2,7 @@
 ## Ce projet est visible [à cette adresse](https://affectionate-kirch-aeff47.netlify.com/)
 
 - Effet sur navbar au scroll 
+- Création d'une page d'admin
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
