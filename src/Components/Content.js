@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Paragraphe from './Paragraphe';
 import Dashboard from '@material-ui/icons/Dashboard'
+import Config from '../config/Config'
 
 const styles = theme => ({
     root: {
@@ -46,7 +47,7 @@ function Content(props) {
     return (
         <div>
             <Paper className={classes.root} elevation={1}>
-                <img src="http://www.purjus.fr/wp-content/uploads/2016/07/logo-purjus-noir.png"
+                <img src={Config.logoBig}
                      width="312"
                      height="296"
                      alt="Purjus Communication"
@@ -58,11 +59,9 @@ function Content(props) {
                 <Typography variant="body2" className={classes.subtitle}>
                     Le code du composant est visible <a href="https://github.com/kewinMarchand/test-app/blob/master/src/Navigation/Navbar.js" target="_blank" rel="noopener noreferrer">à cette adresse</a>
                 </Typography>
-
                 <Typography variant="body1" gutterBottom>
                     Vous pouvez changer l'apparence de la barre de navigation avec le switch
                 </Typography>
-
                 <Typography variant="body1" gutterBottom>
                     Vous pouvez accèder à la page d'administration en cliquant sur l'icône
                     <Typography 
@@ -71,9 +70,7 @@ function Content(props) {
                     >
                         <Dashboard color="secondary"/>
                     </Typography>
-                    
                 </Typography>
-
                 <Paragraphe />
                 <Paragraphe />
                 <Paragraphe />
