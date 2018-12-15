@@ -26,20 +26,6 @@ const styles = {
   }
 };
 
-const images = [
-  {url: "https://picsum.photos/800/450?image=100"},
-  {url: "https://picsum.photos/800/450?image=200"},
-  {url: "https://picsum.photos/800/450?image=300"},
-  {url: "https://picsum.photos/800/450?image=400"},
-  {url: "https://picsum.photos/800/450?image=500"},
-  {url: "https://picsum.photos/800/450?image=600"},
-  {url: "https://picsum.photos/800/450?image=700"},
-  {url: "https://picsum.photos/800/450?image=800"},
-  {url: "https://picsum.photos/800/450?image=00"},
-  {url: "https://picsum.photos/800/450?image=1000"}
-]
-
-
 class Carousel extends React.Component {
   state = {
     size: 12,
@@ -55,10 +41,6 @@ class Carousel extends React.Component {
     let carousel = document.querySelector('#carousel');
     let firstChild = carousel.firstChild;
     carousel.appendChild(firstChild);
-  }
-
-  componentDidMount() {
-    
   }
 
   render() {
