@@ -1,5 +1,5 @@
 import jsonServerProvider from 'ra-data-json-server';
 
-const DataProvider = jsonServerProvider('http://jsonplaceholder.typicode.com');
+const DataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
 
 export default DataProvider
