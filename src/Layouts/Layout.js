@@ -9,7 +9,7 @@ class Layout extends React.Component {
     return (
         <MuiThemeProvider theme={theme}>
           <Navbar/>
-          <Grid container spacing={24} style={{marginTop: 100}}>
+          <Grid container spacing={24} style={{marginTop: 100, position: 'relative'}}>
             {this.props.children}
           </Grid>
         </MuiThemeProvider>

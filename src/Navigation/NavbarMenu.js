@@ -41,7 +41,7 @@ class NavbarMenu extends React.Component {
 
 NavbarMenu.propTypes = {
     classes: PropTypes.object.isRequired,
-    anchorEl: PropTypes.object.isRequired,
+    anchorEl: PropTypes.object,
     handleCloseMenu: PropTypes.func.isRequired,
 }
 

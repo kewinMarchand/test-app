@@ -14,7 +14,6 @@ const styles = theme => ({
 })
 
 class AppBarCustom extends React.Component {
-
     state = {
         oldScroll: 0,
         newScroll: 0,

@@ -61,7 +61,7 @@ function Content(props) {
                     Vous pouvez changer l'apparence de la barre de navigation avec le switch
                 </Typography>
                 <Typography variant="body1" gutterBottom>
-                    Vous pouvez accèder à la page d'administration en cliquant sur l'icône
+                    Vous pouvez accèder à la page d'administration ou à la page des utilisateurs en cliquant sur l'icône
                     <Typography 
                         component="span" 
                         className={classes.inline}

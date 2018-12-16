@@ -19,13 +19,19 @@ class UserCardHeader extends React.Component {
         }
         disableTypography
         title={
-          <Typography style={{color: userTheme.primary}}>
-            {user.name}
+          <Typography 
+            variant="body1"
+            style={{color: userTheme.primary}}
+          >
+            {user.name} 
           </Typography>
         }
         subheader={
-          <Typography style={{color: userTheme.secondary}}>
-            {user.email}
+          <Typography 
+            variant="caption"
+            style={{color: userTheme.secondary}}
+          >
+            dit {user.username}
           </Typography>
         }
       />
