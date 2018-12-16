@@ -31,7 +31,7 @@ class UserCardCollapse extends React.Component {
 }
 
 UserCardCollapse.propTypes = {
-  collapse: PropTypes.object.isRequired,
+  collapse: PropTypes.bool.isRequired,
   user: PropTypes.object.isRequired, 
 };
 

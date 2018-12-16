@@ -3,7 +3,7 @@ import Config from '../config/Config'
 import AppBarCustom from './AppBarCustom'
 import NavbarTitle from './NavbarTitle'
 import NavbarSwitch from './NavbarSwitch'
-import MenuBtn from './MenuBtn'
+import NavbarMenuBtn from './NavbarMenuBtn'
 
 class Navbar extends React.Component {
     state = {
@@ -28,7 +28,7 @@ class Navbar extends React.Component {
                     checked={checked}
                     handleChange={this.handleChange}
                 />
-                <MenuBtn checked={checked}/>
+                <NavbarMenuBtn checked={checked}/>
             </AppBarCustom>
         );
     }

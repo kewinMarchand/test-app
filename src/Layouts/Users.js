@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import Layout from './Layout'
-import UserCard from '../Components/UserCard'
+import UserCard from '../Components/UserCard/UserCard'
 
 const url = 'https://jsonplaceholder.typicode.com/'
 

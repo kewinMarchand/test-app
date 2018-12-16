@@ -21,7 +21,7 @@ class NavbarTitle extends React.Component {
     render() {
         const { classes, logo, title } = this.props
         return (
-            <React.Fragment>
+            <Grid container className={classes.grow}>
                 <Link to="/" className={classes.link}>
                     <Tooltip title="Home page">
                         <Grid 
@@ -41,7 +41,7 @@ class NavbarTitle extends React.Component {
                         </Grid>
                     </Tooltip>
                 </Link>
-            </React.Fragment>
+            </Grid>
         );
     }
 }

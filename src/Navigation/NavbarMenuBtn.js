@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Link} from "react-router-dom"
-import {withStyles, Fab, Fade, Menu, MenuItem, Tooltip} from '@material-ui/core/'
+import {withStyles, Fab, Tooltip} from '@material-ui/core/'
 import Dashboard from '@material-ui/icons/Dashboard'
+import NavbarMenu from './NavbarMenu'
 
 const styles = theme => ({
     fab: {
@@ -10,7 +10,7 @@ const styles = theme => ({
     },
 })
 
-class MenuBtn extends React.Component {
+class NavbarMenuBtn extends React.Component {
 
     state = {
         anchorEl: null,
@@ -42,31 +42,18 @@ class MenuBtn extends React.Component {
                         />
                     </Tooltip>
                 </Fab>
-                <Menu 
-                    anchorEl={anchorEl} 
-                    open={Boolean(anchorEl)} 
-                    onClose={this.handleCloseMenu}
-                    TransitionComponent={Fade}
-                >
-                    <MenuItem onClick={this.handleCloseMenu}>
-                        <Link to="/admin" className={classes.link}>
-                            Admin
-                        </Link>
-                    </MenuItem>
-                    <MenuItem onClick={this.handleCloseMenu}>
-                        <Link to="/users" className={classes.link}>
-                            Users
-                        </Link>
-                    </MenuItem>
-                </Menu>
+                <NavbarMenu 
+                    anchorEl={anchorEl}
+                    handleCloseMenu={this.handleCloseMenu}
+                />
             </React.Fragment>
         );
     }
 }
 
-MenuBtn.propTypes = {
+NavbarMenuBtn.propTypes = {
     classes: PropTypes.object.isRequired,
     checked: PropTypes.bool.isRequired,
 }
 
-export default withStyles(styles)(MenuBtn)
+export default withStyles(styles)(NavbarMenuBtn)
