@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Paragraphe from './Paragraphe';
+import {withStyles, Grid, Paper, Typography } from '@material-ui/core/';
 import Dashboard from '@material-ui/icons/Dashboard'
 import Config from '../config/Config'
+import Paragraphe from './Paragraphe'
 
 const styles = theme => ({
     root: {
@@ -45,7 +43,7 @@ const styles = theme => ({
 function Content(props) {
     const { classes } = props;
     return (
-        <div>
+        <Grid item xs={12}>
             <Paper className={classes.root} elevation={1}>
                 <img src={Config.logoBig}
                      width="312"
@@ -78,7 +76,7 @@ function Content(props) {
                 <Paragraphe />
                 <Paragraphe />
             </Paper>
-        </div>
+        </Grid>
     );
 }
 

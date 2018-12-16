@@ -1,11 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import Layout from './Layout'
-import Content from '../Components/Content'
+import UserCard from '../Components/UserCard'
 
 const url = 'https://jsonplaceholder.typicode.com/'
 
-class Home extends React.Component {
+class Users extends React.Component {
 
   getAndStore = (endpoint, actionName) => {
     fetch(url + endpoint)
@@ -22,10 +22,12 @@ class Home extends React.Component {
   }
 
   render() {
-    console.log(this.props.storeUsers.Users[0])
+    const users = this.props.storeUsers.Users
     return (
       <Layout>
-        <Content/>
+        {users && users.map((user, index) => (
+          <UserCard key={index} user={user}/> 
+        ))}
       </Layout> 
     );
   }
@@ -41,4 +43,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(Users)

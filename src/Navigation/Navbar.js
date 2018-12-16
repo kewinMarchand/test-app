@@ -3,7 +3,7 @@ import Config from '../config/Config'
 import AppBarCustom from './AppBarCustom'
 import NavbarTitle from './NavbarTitle'
 import NavbarSwitch from './NavbarSwitch'
-import AdminLink from './AdminLink'
+import MenuBtn from './MenuBtn'
 
 class Navbar extends React.Component {
     state = {
@@ -28,9 +28,7 @@ class Navbar extends React.Component {
                     checked={checked}
                     handleChange={this.handleChange}
                 />
-                <AdminLink 
-                    checked={checked}
-                />  
+                <MenuBtn checked={checked}/>
             </AppBarCustom>
         );
     }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Typography from '@material-ui/core/Typography';
 
 function Paragraphe() {
@@ -9,4 +9,4 @@ function Paragraphe() {
     );
 }
 
-export default Paragraphe;
+export default Paragraphe

@@ -41,10 +41,6 @@ class NavbarTitle extends React.Component {
                         </Grid>
                     </Tooltip>
                 </Link>
-                <Grid 
-                    container 
-                    className={classes.grow}
-                />
             </React.Fragment>
         );
     }
