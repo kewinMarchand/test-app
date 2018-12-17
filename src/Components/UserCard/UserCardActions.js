@@ -12,7 +12,8 @@ class UserCardActions extends React.Component {
         <Grid container justify="flex-end">
           <IconButton onClick={handleCollapse}>
             {collapse ? 
-              <Clear style={{color: userTheme.primary}}/> : 
+              <Clear style={{color: userTheme.primary}}/> 
+              : 
               <Add style={{color: userTheme.secondary}}/>
             }
           </IconButton>

@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {compose} from 'recompose';
 import {Link} from "react-router-dom"
 import {withStyles, Grid, Tooltip, Typography} from '@material-ui/core/'
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth'
 import NavbarLogo from './NavbarLogo'
 
 const styles = theme => ({
@@ -19,17 +21,17 @@ const styles = theme => ({
 
 class NavbarTitle extends React.Component {
     render() {
-        const { classes, logo, title } = this.props
+        const { classes, logo, title, width} = this.props
         return (
             <Grid container className={classes.grow}>
                 <Link to="/" className={classes.link}>
-                    <Tooltip title="Home page">
-                        <Grid 
-                            container
-                            alignItems="center" 
-                            wrap="nowrap"
-                        >
-                            <NavbarLogo logo={logo}/>
+                    <Grid 
+                        container
+                        alignItems="center" 
+                        wrap="nowrap"
+                    >
+                        <NavbarLogo logo={logo}/>
+                        {isWidthUp('md', width) &&
                             <Typography 
                                 noWrap
                                 variant="h6" 
@@ -38,8 +40,8 @@ class NavbarTitle extends React.Component {
                             >
                                 {title}
                             </Typography>
-                        </Grid>
-                    </Tooltip>
+                        }
+                    </Grid>
                 </Link>
             </Grid>
         );
@@ -52,4 +54,7 @@ NavbarTitle.propTypes = {
     title: PropTypes.string.isRequired,
 }
 
-export default withStyles(styles)(NavbarTitle)
+export default compose(
+    withStyles(styles), 
+    withWidth()
+    )(NavbarTitle)

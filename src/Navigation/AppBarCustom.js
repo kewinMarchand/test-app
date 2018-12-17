@@ -10,7 +10,7 @@ const styles = theme => ({
     hidden: {
         opacity: 0,
         transition: 'all 2s',
-    }
+    },
 })
 
 class AppBarCustom extends React.Component {

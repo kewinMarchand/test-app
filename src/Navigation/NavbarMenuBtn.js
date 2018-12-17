@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {withStyles, Fab, Tooltip} from '@material-ui/core/'
+import {withStyles, IconButton, Tooltip} from '@material-ui/core/'
 import Dashboard from '@material-ui/icons/Dashboard'
 import NavbarMenu from './NavbarMenu'
 
 const styles = theme => ({
-    fab: {
+    btn: {
         margin: theme.spacing.unit,
     },
 })
@@ -29,19 +29,18 @@ class NavbarMenuBtn extends React.Component {
         const { classes, checked } = this.props
         return (
             <React.Fragment>
-                <Fab 
-                    color={checked ? "primary" : "secondary"}
-                    aria-label="Admin" 
-                    size="small"
-                    className={classes.fab}
-                    onClick={this.handleOpenMenu}
-                >
-                    <Tooltip title="menu">
+                <Tooltip title="menu">
+                    <IconButton 
+                        aria-label="Menu" 
+                        className={classes.btn}
+                        onClick={this.handleOpenMenu}
+                    >
                         <Dashboard 
-                            color={checked ? "secondary" : "primary"}
+                            color={checked ? "primary" : "secondary"}
                         />
-                    </Tooltip>
-                </Fab>
+                    
+                    </IconButton>
+                </Tooltip>
                 <NavbarMenu 
                     anchorEl={anchorEl}
                     handleCloseMenu={this.handleCloseMenu}

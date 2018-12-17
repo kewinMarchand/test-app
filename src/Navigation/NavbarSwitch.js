@@ -6,7 +6,7 @@ class NavbarSwitch extends React.Component {
     render() {
         const { checked, handleChange } = this.props
         return (
-            <Tooltip title="change color">
+            <Tooltip title="changement de couleur">
                 <Switch
                     checked={checked}
                     onChange={handleChange}
