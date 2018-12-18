@@ -2,7 +2,7 @@ import React from 'react';
 import { List, Datagrid, TextField, ReferenceField } from 'react-admin';
 
 const PostList = props => (
-    <List {...props}>
+    <List {...props} title="Articles">
         <Datagrid rowClick="edit">
             <ReferenceField source="userId" reference="users">
                 <TextField source="id" />

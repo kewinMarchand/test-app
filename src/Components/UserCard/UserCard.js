@@ -24,7 +24,7 @@ class UserCard extends React.Component {
 
   render() {
     const {collapse, userTheme} = this.state
-    const {classes, user} = this.props
+    const {user} = this.props
     return (
         <UserCardLayout collapse={collapse}>
           {user && userTheme &&

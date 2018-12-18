@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {compose} from 'recompose';
 import {Link} from "react-router-dom"
-import {withStyles, Grid, Tooltip, Typography} from '@material-ui/core/'
+import {withStyles, Grid, Typography} from '@material-ui/core/'
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth'
 import NavbarLogo from './NavbarLogo'
 
