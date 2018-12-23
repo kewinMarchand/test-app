@@ -9,6 +9,10 @@ const theme = createMuiTheme({
     },
     typography: {
         useNextVariants: true,
+        fontSize: 16,
+        body1: {
+            fontSize: '.875rem',
+        }
     },
 });
 

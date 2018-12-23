@@ -30,6 +30,11 @@ class NavbarMenu extends React.Component {
                     </Link>
                 </MenuItem>
                 <MenuItem onClick={handleCloseMenu}>
+                    <Link to="/lois" className={classes.link}>
+                        Lois
+                    </Link>
+                </MenuItem>
+                <MenuItem onClick={handleCloseMenu}>
                     <Link to="/admin" className={classes.link}>
                         Admin
                     </Link>
