@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {Link} from 'react-router-dom'
 import {getRandomUserTheme} from '../../helpers/getRandomColor'
 import UserCardLayout from './UserCardLayout'
 import UserCardHeader from './UserCardHeader'
@@ -26,25 +27,25 @@ class UserCard extends React.Component {
     const {collapse, userTheme} = this.state
     const {user} = this.props
     return (
-        <UserCardLayout collapse={collapse}>
-          {user && userTheme &&
-            <React.Fragment>
-              <UserCardHeader 
-                user={user} 
-                userTheme={userTheme}
-              />
-              <UserCardContent 
-                collapse={collapse} 
-                user={user}
-              />
-              <UserCardActions 
-                collapse={collapse} 
-                handleCollapse={this.handleCollapse} 
-                userTheme={userTheme}
-              />  
-            </React.Fragment>
-          }
-        </UserCardLayout> 
+      <UserCardLayout collapse={collapse}>
+        {user && userTheme &&
+          <Link to={'/users/' + user.username}> 
+            <UserCardHeader 
+              user={user} 
+              userTheme={userTheme}
+            />
+            <UserCardContent 
+              collapse={collapse} 
+              user={user}
+            />
+            <UserCardActions 
+              collapse={collapse} 
+              handleCollapse={this.handleCollapse} 
+              userTheme={userTheme}
+            />  
+          </Link> 
+        }
+      </UserCardLayout> 
     );
   }
 }

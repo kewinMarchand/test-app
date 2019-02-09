@@ -5,7 +5,7 @@ import LawCardAuthor from './LawCardAuthor'
 import LawCardThemes from './LawCardThemes'
 import LawCardSteps from './LawCardSteps'
 import LawCardActions from './LawCardActions'
-import {Card, CardContent, CardHeader, Collapse, Grid, Hidden, List, ListItem, ListItemText, ListSubheader, Typography} from '@material-ui/core/'
+import {Card, CardContent, Collapse, List, Typography} from '@material-ui/core/'
 
 class LawCard extends React.Component {
   state = {

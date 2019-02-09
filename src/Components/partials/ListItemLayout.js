@@ -25,7 +25,7 @@ class ListItemLayout extends React.Component {
 
 ListItemLayout.propTypes = {
   title: PropTypes.string,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.object.isRequired,
   divider: PropTypes.bool
 };
 

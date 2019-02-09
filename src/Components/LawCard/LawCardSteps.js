@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ListItemLayout from '../partials/ListItemLayout'
-import {Grid, Hidden, List, ListItem, ListItemText, ListSubheader, Typography} from '@material-ui/core/'
+import {Grid, Hidden, List, ListItem, ListItemText, Typography} from '@material-ui/core/'
 import Check from '@material-ui/icons/CheckCircle'
 
 class LawCardSteps extends React.Component {

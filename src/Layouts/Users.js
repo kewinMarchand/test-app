@@ -23,6 +23,7 @@ class Users extends React.Component {
 
   render() {
     const users = this.props.storeUsers.Users
+    console.log(users[0])
     return (
       <Layout>
         {users && users.map((user, index) => (
